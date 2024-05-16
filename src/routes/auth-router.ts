@@ -4,7 +4,7 @@ import express from "express";
 
 const authRouter= express.Router();
 
-authRouter.post("/login", (req, res) => {})
+authRouter.post("/login", (_req, _res) => {})
 
 
 
