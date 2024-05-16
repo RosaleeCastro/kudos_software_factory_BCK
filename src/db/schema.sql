@@ -13,7 +13,7 @@ VALUES
   ('menganito', 'menganito@mial.com', 35, 'user'),
   ('pepito', 'pepito@mial.com', 50, 'admin');
 
-/* esta creación de tabla viene de la documentación de express-session */
+/* esta creación de tabla viene de la documentación de express-session me sirve para llevar el registro de las sesiones */
 CREATE TABLE "session" (
   "sid" varchar NOT NULL COLLATE "default",
   "sess" json NOT NULL,
