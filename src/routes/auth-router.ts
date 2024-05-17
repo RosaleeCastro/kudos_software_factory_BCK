@@ -3,11 +3,8 @@ import { validateCredentianls } from "../services/auth-services";
 
 const authRouter= express.Router();
 
-authRouter.get("/", (_req, res) => {
-    res.send("Hola mundo ROSALEE !!!")
-})
 
-authRouter.post("/login", async(req, res) => {
+authRouter.post("/login", async(req, res, next) => {
 try {
     //paso #1 validacion del usuario
     const user = await validateCredentianls(req.body);
@@ -15,10 +12,25 @@ try {
     req.session.userId = user.id;
     res.json({ok: true, message: "Login exitoso"})
 } catch (error) {
-    res.status(401).json({ok: false, message: "Credenciales inválidas"})
+    next(error)
 }
 
 })
+
+
+authRouter.post("/logout", (req, res, next) => {
+    req.session.destroy((error) => {
+      if (error) {
+        next(error);
+      } else {
+        res.clearCookie("connect.sid");
+        res.json({ ok: true, message: "Logout exitoso" });
+      }
+    });
+  });
+
+
+
 
 
 
