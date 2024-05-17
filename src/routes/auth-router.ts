@@ -4,7 +4,13 @@ import express from "express";
 
 const authRouter= express.Router();
 
-authRouter.post("/login", (_req, _res) => {})
+authRouter.get("/", (_req, res) => {
+    res.send("Hola mundo ROSALEE !!!")
+})
+
+authRouter.post("/login", (_req, _res) => {
+
+})
 
 
 
