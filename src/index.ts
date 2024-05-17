@@ -3,6 +3,7 @@ import authRouter from "./routes/auth-router";
 import cookieParser from "cookie-parser";
 import sessionHandler from "./midlewears/session";
 import errorHandler from "./midlewears/errors";
+import uploadRouter from "./routes/upload-router";
 const morgan = require('morgan')
 
 const app = express();
@@ -17,6 +18,7 @@ app.use(sessionHandler())
 
 //Routers
 app.use(authRouter)
+app.use('/upload', uploadRouter)
 
 
 // manejo de errores centralizado

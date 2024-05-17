@@ -7,19 +7,17 @@ authRouter.get("/", (_req, res) => {
     res.send("Hola mundo ROSALEE !!!")
 })
 
-authRouter.post("/login", (req, _res) => {
-//valida las credenciales, para ello usa la fx 
-// recibe la peticion
+authRouter.post("/login", async(req, res) => {
 try {
-    const user = validateCredentianls(req.body);
-
-    
+    //paso #1 validacion del usuario
+    const user = await validateCredentianls(req.body);
+    // encontramos el id del usuario y lo asignamos a una session atravez del middlewear de expreess-session
+    req.session.userId = user.id;
+    res.json({ok: true, message: "Login exitoso"})
 } catch (error) {
-    
+    res.status(401).json({ok: false, message: "Credenciales inválidas"})
 }
-// hace la validacion con zod 
-// genera el token
-// responde
+
 })
 
 
