@@ -24,3 +24,14 @@ WITH (OIDS=FALSE);
 ALTER TABLE "session" ADD CONSTRAINT "session_pkey" PRIMARY KEY ("sid") NOT DEFERRABLE INITIALLY IMMEDIATE;
  
 CREATE INDEX "IDX_session_expire" ON "session" ("expire");
+
+
+/* insertar nueva tabla */
+ALTER TABLE users
+ADD COLUMN password_hash VARCHAR(255);
+
+
+UPDATE users
+SET password_hash = '[COLOCAR AQUI TU HASH DE LA CONTRASEÑA DE PRUEBA]'
+WHERE id = [ID DEL USUARIO];
+

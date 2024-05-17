@@ -2,6 +2,7 @@ import express from "express"
 import authRouter from "./routes/auth-router";
 import cookieParser from "cookie-parser";
 import sessionHandler from "./midlewears/session";
+import errorHandler from "./midlewears/errors";
 const morgan = require('morgan')
 
 const app = express();
@@ -16,6 +17,10 @@ app.use(sessionHandler())
 
 //Routers
 app.use(authRouter)
+
+
+// manejo de errores centralizado
+app.use(errorHandler)
 
 app.listen (port, () => {
    console.log(`Listening on port ${port}`) 

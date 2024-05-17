@@ -9,8 +9,12 @@ authRouter.get("/", (_req, res) => {
 })
 
 authRouter.post("/login", (_req, _res) => {
-
+// recibe la peticion
+// hace la validacion con zod 
+// genera el token
+// responde
 })
+
 
 
 
