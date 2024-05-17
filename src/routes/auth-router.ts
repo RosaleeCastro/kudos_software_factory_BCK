@@ -1,6 +1,8 @@
 import express from "express";
+import  jwt from "jsonwebtoken";
 import { validateCredentianls } from "../services/auth-services";
 
+const jwSecret = "mindset";
 const authRouter= express.Router();
 
 
@@ -9,8 +11,12 @@ try {
     //paso #1 validacion del usuario
     const user = await validateCredentianls(req.body);
     // encontramos el id del usuario y lo asignamos a una session atravez del middlewear de expreess-session
-    req.session.userId = user.id;
-    res.json({ok: true, message: "Login exitoso"})
+    // ya no vamos a manejar por sesiones 
+    //req.session.userId = user.id;
+    //Ahora lo vamos a manejar por jwt
+    const payload = { userId: user.id };
+    const token = jwt.sign(payload, jwSecret, {expiresIn: "5min"})// no olvidar el tiempo de expiración
+    res.json({ok: true, message: "Login exitoso", data: {token}})
 } catch (error) {
     next(error)
 }

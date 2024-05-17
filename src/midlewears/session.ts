@@ -1,4 +1,4 @@
-import connectPgSimple from "connect-pg-simple";
+/*import connectPgSimple from "connect-pg-simple";
 import session from "express-session";
 import { pool } from "../db";
 
@@ -18,6 +18,6 @@ export default function sessionHandler() {
     cookie: { httpOnly: true },
   });
 }
-
+*/
 
 // codigo extraido de la documentacion de express-session, se recomienda usar la libreria de coneccion pg-simple

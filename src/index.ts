@@ -1,7 +1,6 @@
 import express from "express"
 import authRouter from "./routes/auth-router";
 import cookieParser from "cookie-parser";
-import sessionHandler from "./midlewears/session";
 import errorHandler from "./midlewears/errors";
 import uploadRouter from "./routes/upload-router";
 const morgan = require('morgan')
@@ -13,7 +12,7 @@ const port = 3000;
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
 app.use(cookieParser())
 app.use(express.json())
-app.use(sessionHandler())
+//app.use(sessionHandler())
 
 
 //Routers
