@@ -14,7 +14,7 @@ try {
     // ya no vamos a manejar por sesiones 
     //req.session.userId = user.id;
     //Ahora lo vamos a manejar por jwt
-    const payload = { userId: user.id };
+    const payload = { userId: user.id, userRole: user.role };
     const token = jwt.sign(payload, jwSecret, {expiresIn: "5min"})// no olvidar el tiempo de expiración
     res.json({ok: true, message: "Login exitoso", data: {token}})
 } catch (error) {
