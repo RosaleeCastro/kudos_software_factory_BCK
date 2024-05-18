@@ -2,11 +2,11 @@ import express from "express"
 import authRouter from "./routes/auth-router";
 import cookieParser from "cookie-parser";
 import errorHandler from "./midlewears/errors";
-import uploadRouter from "./routes/upload-router";
+//import uploadRouter from "./routes/upload-router";
 const morgan = require('morgan')
 
 const app = express();
-const port = 3000;
+const port = 3500;
 
 // Middleware
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
@@ -17,7 +17,7 @@ app.use(express.json())
 
 //Routers
 app.use(authRouter)
-app.use('/upload', uploadRouter)
+//app.use('/upload', uploadRouter)
 
 
 // manejo de errores centralizado

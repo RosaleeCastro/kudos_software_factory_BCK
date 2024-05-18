@@ -15,8 +15,14 @@ export const userSchema = z.object({
       invalid_type_error: "Password debe ser un string",
     })
     .min(6, "Password debe tener al menos 6 caracteres"),
+    role: z
+    .enum(["admin", "user"], {
+      invalid_type_error: "Role debe ser un string",
+    })
+    .default("user"),
+
 });
 
 export type UserParams = z.infer<typeof userSchema>;
 
-export type User = UserParams & { id: number, name: string, age: number, role: "user" | "admin" };
+export type User = UserParams & { id: number, name: string, age: number };
