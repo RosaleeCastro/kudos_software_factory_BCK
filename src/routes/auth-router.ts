@@ -24,7 +24,7 @@ try {
 })
 
 
-authRouter.post("/logout", (req, res, next) => {
+/*authRouter.post("/logout", (req, res, next) => {
     req.session.destroy((error) => {
       if (error) {
         next(error);
@@ -34,7 +34,7 @@ authRouter.post("/logout", (req, res, next) => {
       }
     });
   });
-
+*/
 
 
 

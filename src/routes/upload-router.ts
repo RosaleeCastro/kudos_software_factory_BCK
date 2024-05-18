@@ -7,7 +7,7 @@ import { authorize } from "../midlewears/authorize";
 const uploadRouter = express.Router();
 
 
-uploadRouter.post("/upload", authenticateHandler, authorize("admin"), (_req, res) => {
+uploadRouter.post("/", authenticateHandler, authorize("admin"), (_req, res) => {
     res.json({ok: true, message: "Bienvenido querido administrador"})
 })
 

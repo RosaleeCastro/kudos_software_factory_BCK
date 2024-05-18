@@ -5,6 +5,9 @@ import errorHandler from "./midlewears/errors";
 import uploadRouter from "./routes/upload-router";
 //import uploadRouter from "./routes/upload-router";
 const morgan = require('morgan')
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 const app = express();
 const port = 3500;
