@@ -17,7 +17,7 @@ export const userSchema = z.object({
     .min(6, "Password debe tener al menos 6 caracteres"),
     role: z
     .enum(["admin", "user"], {
-      invalid_type_error: "Role debe ser un string",
+      errorMap: () => ({ message: "El rol debe ser admin o user" }),
     })
     .default("user"),
 

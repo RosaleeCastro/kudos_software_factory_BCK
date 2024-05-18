@@ -28,7 +28,7 @@ CREATE INDEX "IDX_session_expire" ON "session" ("expire");
 
 /* insertar nueva tabla */
 ALTER TABLE users
-ADD COLUMN password_hash VARCHAR(255);
+ADD COLUMN password VARC HAR(255);
 
 
 UPDATE users
