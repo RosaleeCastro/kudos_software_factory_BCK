@@ -33,8 +33,8 @@ const processCsv = (req, res) => {
                     age: parseInt(data.age, 10),
                 };
                 success.push(user);
-                console.log(user);
-                console.log(typeof user);
+                ;
+                
                 (0, data_1.insertIntoDatabase)(user); // Aquí se inserta en la base de datos
             }
         })

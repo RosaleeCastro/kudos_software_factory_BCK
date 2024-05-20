@@ -11,7 +11,7 @@ async function getUserById(id) {
 }
 exports.getUserById = getUserById;
 const insertIntoDatabase = async (user) => {
-    console.log(user);
+  
     const query = 'INSERT INTO users ( name, email, age) VALUES ($1, $2, $3)';
     const values = [user.name, user.email, user.age];
     try {

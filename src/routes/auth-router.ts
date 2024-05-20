@@ -12,7 +12,7 @@ authRouter.get("/", (_req, res) => {
 
 authRouter.post("/login", async(req, res, next) => {
 try {
-  console.log('cuerpo de la petición', req.body)
+  
     //paso #1 validacion del usuario
     const user = await validateCredentianls(req.body);
     // encontramos el id del usuario y lo asignamos a una session atravez del middlewear de expreess-session

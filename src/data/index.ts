@@ -10,7 +10,7 @@ export async function getUserByEmail(email: string): Promise<User | undefined> {
   }
 
   export const insertIntoDatabase = async (user: UserWithoutIdPsw) => {
-    console.log(user)
+  
     const query = 'INSERT INTO users ( name, email, age) VALUES ($1, $2, $3)';
     const values = [ user.name, user.email, user.age];
   

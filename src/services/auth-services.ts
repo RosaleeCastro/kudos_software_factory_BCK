@@ -10,8 +10,8 @@ export async function validateCredentianls(credentials: UserParams):Promise<User
     const user = await userDb.getUserByEmail(email);//verificacion de existencia email y lo guard
     // Si el usuario no existe, lanza un error inmediatamente
     // Log de depuración para verificar los valores
-    console.log('Usuario encontrado:', user);
-    console.log('Password proporcionada:', password);
+   
+   
     if (!user) {
         throw new ApiError("Credenciales inválidas", 400);
     }
