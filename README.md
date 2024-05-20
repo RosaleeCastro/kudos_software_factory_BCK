@@ -107,6 +107,7 @@ Es muy importante que si lo vas a desplegar de forma local le de las variables q
 ## Estructura del Proyecto
 
 La estructura del proyecto es la siguiente:
+```
 KUDOS_SOFTWARE_FACTORY_BCK
 ├── build
 ├── node_modules
@@ -126,7 +127,7 @@ KUDOS_SOFTWARE_FACTORY_BCK
 ├── package.json
 ├── README.md
 └── tsconfig.json
- 
+ ```
 Nuestra applicación esta construidas con una arquitectura de tres capas:
 * Routers : Define las rutas y maneja los endpoints y solicitudes HTTP 
 * Services : Contiene la lógica del negocio y se comunica con la capa de accesos de datos.
@@ -147,8 +148,10 @@ POST/upload (Subir archivo csv)
 
 
 ## Despliegue en Render 
-* Nuestra Api esta despleyado en Render 
+* Nuestra Api esta desplegado  en Render 
+
 ![Página Principal](/img/Captura%20de%20pantalla%202024-05-20%20163710.png)
+
 ![Página Principal](/img/Captura%20de%20pantalla%202024-05-20%20164419.png)
 
 ```
