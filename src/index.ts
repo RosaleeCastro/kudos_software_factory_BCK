@@ -3,15 +3,22 @@ import authRouter from "./routes/auth-router";
 import cookieParser from "cookie-parser";
 import errorHandler from "./midlewears/errors";
 import uploadRouter from "./routes/upload-router";
-//import uploadRouter from "./routes/upload-router";
 const morgan = require('morgan')
-import dotenv from 'dotenv';
+import cors from 'cors'
+import { configDotenv } from 'dotenv';
 
-dotenv.config();
-
+//dotenv.config();
+configDotenv()
 
 const app = express();
-const port = 3500;
+// Configurar CORS para permitir solicitudes desde el frontend
+const corsOptions = {
+   origin: process.env["CLIENT_ORIGIN"], // http:localhost:5173
+   optionsSuccessStatus: 200,
+ };
+ app.use(cors(corsOptions));
+ 
+const port = process.env["PORT"] ||3500;
 
 // Middleware
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
