@@ -8,7 +8,10 @@ Te presento un API RESTFUL super amigable, que le permite al usuario con el rol 
 
 ## Documentation
 
-[nodejs](https://nodejs.org/en) [typescrit](https://www.typescriptlang.org/)
+[nodejs](https://nodejs.org/en) 
+[typescrit](https://www.typescriptlang.org/)
+[expressjs](https://expressjs.com/) 
+
 
 
 ## Lessons Learned
@@ -26,4 +29,7 @@ What did you learn while building this project? What challenges did you face and
 ## Authors
 
 - [@octokatherine](https://www.github.com/octokatherine)
+
+
+![Logo](https://www.canva.com/design/DAGFyoc_PE0/KYrJCmEzmg89PSFs1uzplw/edit?utm_content=DAGFyoc_PE0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
