@@ -140,21 +140,25 @@ POST/login (Iniciar Sesión )
 * Descripción: Permite a un usuario existente iniciar sesión.
 * Body: email, password, role - Credenciales requeridas para el inicio de sesión.
 * Respuesta: Inicia sesión y devuelve un token JWT.
+![Página Principal](/img/image.png)
 
 POST/upload (Subir archivo csv)
 * Autentica al usuario que tiene el role "admin" para que genere la logica del negocio.
 * Atravez de un middlewear lo sube, lo transforma y lo entrega para que pase a la base de datos atravez de un servicio.
-*
 
+![Página Principal](/img/Captura%20de%20pantalla%202024-05-20%20174034.png)
 
+---------------------------------------------------------------------------------------------
 ## Despliegue en Render 
+
+
 * Nuestra Api esta desplegado  en Render 
 
 ![Página Principal](/img/Captura%20de%20pantalla%202024-05-20%20163710.png)
 
 ![Página Principal](/img/Captura%20de%20pantalla%202024-05-20%20164419.png)
 
-```
+
 https://kudos-software-factory-bck.onrender.com
-```
-20240520_161820 https://reccloud.com/es/u/z8zccnk
+
+[Ver el video](https://reccloud.com/es/u/z8zccnk)
