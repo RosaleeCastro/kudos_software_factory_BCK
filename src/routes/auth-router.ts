@@ -6,6 +6,10 @@ const jwSecret = "mindset";
 const authRouter= express.Router();
 
 
+authRouter.get("/", (_req, res) => {
+  res.send("Auth Router BY ROSALEE CASTRO")
+})
+
 authRouter.post("/login", async(req, res, next) => {
 try {
   console.log('cuerpo de la petición', req.body)
