@@ -1,33 +1,29 @@
-# Nombre del Repositorio
 
-Descripción breve del propósito del repositorio.
+# Api  Kudos Software Factory
 
-## Tabla de contenidos
+Te presento un API RESTFUL super amigable, que le permite al usuario con el rol "admin" autenticado y autorizado , hacer uso de ella para ingresar datos de nuevos usuarios. usando un archivo de entrada de extensión csv, permitiendo manejar esta información  en nuestra Base de datos con la seguridad de : datos validos.
 
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
 
-## Instalación
 
-Pasos para instalar y configurar el proyecto.
 
-## Uso
+## Documentation
 
-Explicación de cómo usar el proyecto y cualquier otra información relevante.
+[nodejs](https://nodejs.org/en) [typescrit](https://www.typescriptlang.org/)
 
-## Contribuciones
 
-Instrucciones para contribuir al proyecto.
+## Lessons Learned
 
-## Licencia
+What did you learn while building this project? What challenges did you face and how did you overcome them?
 
-Información sobre la licencia del proyecto.
 
-## Contacto
+## Acknowledgements
 
-Información de contacto para preguntas o problemas relacionados con el proyecto.
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
-## Deploying 
-    https://kudos-software-factory-bck.onrender.com
+
+## Authors
+
+- [@octokatherine](https://www.github.com/octokatherine)
+
