@@ -27,5 +27,6 @@ export type UserParams = z.infer<typeof userSchema>;
 
 export type User = UserParams & { id: number, name: string, age: number };
 export type UserWithOutId = Omit<User, "id">
+export type UserWithoutPassId = Omit<UserWithOutId, "password">
 
 export type UserWithoutIdPsw = Omit<User, "role"| "password">
