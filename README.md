@@ -144,11 +144,14 @@ POST/upload (Subir archivo csv)
 * Autentica al usuario que tiene el role "admin" para que genere la logica del negocio.
 * Atravez de un middlewear lo sube, lo transforma y lo entrega para que pase a la base de datos atravez de un servicio.
 *
-![Página Principal](/img/Captura%20de%20pantalla%202024-05-20%20163710.png)
 
 
 ## Despliegue en Render 
 * Nuestra Api esta despleyado en Render 
+![Página Principal](/img/Captura%20de%20pantalla%202024-05-20%20163710.png)
+![Página Principal](/img/Captura%20de%20pantalla%202024-05-20%20164419.png)
+
 ```
 https://kudos-software-factory-bck.onrender.com
 ```
+20240520_161820 https://reccloud.com/es/u/z8zccnk
